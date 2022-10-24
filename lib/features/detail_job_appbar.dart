@@ -43,11 +43,3 @@ class _DetailjobAppbarState extends State<DetailjobAppbar> {
     );
   }
 }
-/* InkWell(
-          onTap: () {
-            Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => HomePageScreen(),
-                ));
-          }, */
