@@ -16,14 +16,15 @@ class _SearchBarState extends State<SearchBar> {
       height: 35.h,
       width: 85.w,
       child: TextField(
+        style: TextStyle(color: Colors.white),
         textAlign: TextAlign.start,
         textAlignVertical: TextAlignVertical.center,
         decoration: InputDecoration(
           prefixIcon: IconButton(
               onPressed: () {},
-              icon: SvgPicture.asset("assets/HomePageAssets/Search.svg",color: Color(0xffF8FAFC),)),
+              icon: SvgPicture.asset("assets/homepage_assets/Searchs.svg",color: Color(0xffF8FAFC),)),
           hintText: "Search job or company...",
-          hintStyle: TextStyle(color: Color(0xffF8FAFC), fontSize: 18),
+          hintStyle: TextStyle(color: Color(0xff94A3B8), fontSize: 18),
           enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(15),
               borderSide: BorderSide(width: 2, color: Color(0xff334155))),
