@@ -26,7 +26,7 @@ class _DescriptionMenuState extends State<DescriptionMenu> {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Text(
-                descIndex == 0 ? "Job Description" : "",
+                descIndex == 0 ? "Job Description:" :  descIndex == 1 ? "Sector:" : descIndex == 2 ? "Applicant Requirements:" : "",
                 style:
                     GoogleFonts.inter(color: Color(0xffF8FAFC), fontSize: 15),
               ),
@@ -34,7 +34,7 @@ class _DescriptionMenuState extends State<DescriptionMenu> {
               Text(
                 descIndex == 0
                     ? "Ready to help unleash the power of teams across the\nglobe?\nWe're looking for a Product Designer to join our Cloud\nSecurity team. Jira Software, Jira Service Management,\nConfluence, and Bitbucket Data Center are Atlassian’s\non-premise offers used by our largest and most\ncomplex customers."
-                    : "",
+                    : descIndex == 1 ? "Programming" : descIndex == 2 ? "5 years of experince" : "",
                 style: GoogleFonts.inter(
                   fontSize: 13,
                   color: Color(0xffAAAFD7),
@@ -44,7 +44,7 @@ class _DescriptionMenuState extends State<DescriptionMenu> {
                 height: 12,
               ),
               Text(
-                descIndex == 0 ? "Responsibilities" : "",
+                descIndex == 0 ? "Responsibilities" : descIndex == 1 ? "Active Projects:" : descIndex == 2 ? "Responsibilities" : "" ,
                 style: GoogleFonts.inter(
                     fontSize: 15,
                     color: Color(0xffF8FAFC),
@@ -56,7 +56,7 @@ class _DescriptionMenuState extends State<DescriptionMenu> {
               Text(
                 descIndex == 0
                     ? "# Work on projects across all our Cloud products\n# Harness your product design skills to help\nstreamline the critical experience for our users."
-                    : "",
+                    : descIndex == 1 ? "Projects A" : descIndex == 2 ? "Team Leader" : "" ,
                 style:
                     GoogleFonts.inter(fontSize: 13, color: Color(0xffAAAFD7)),
               ),
@@ -68,95 +68,101 @@ class _DescriptionMenuState extends State<DescriptionMenu> {
   }
 
   Container descMenu() {
-    return Container(
-      height: 8.h,
-      width: 100.w,
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(12), color: Color(0xff0C0D15)),
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            InkWell(
-              onTap: () {
-                setState(() {
-                  descIndex = 0;
-                });
-              },
-              child: Container(
-                height: 4.h,
-                width: 28.w,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(12),
-                  color: descIndex == 0 ? Color(0xff1051F8) : Color(0xff0C0D15),
-                ),
-                child: Center(
-                  child: Text(
-                    "Descriptions",
-                    style: TextStyle(
-                        color: descIndex == 0
-                            ? Color(0xffFFFFFF)
-                            : Color(0xff40577D),
-                        fontSize: 15),
-                  ),
-                ),
-              ),
-            ),
-            InkWell(
-              onTap: () {
-                setState(() {
-                  descIndex = 1;
-                });
-              },
-              child: Container(
-                height: 4.h,
-                width: 28.w,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(12),
-                  color: descIndex == 1 ? Color(0xff1051F8) : Color(0xff0C0D15),
-                ),
-                child: Center(
-                  child: Text(
-                    "Company",
-                    style: TextStyle(
-                        color: descIndex == 1
-                            ? Color(0xffFFFFFF)
-                            : Color(0xff40577D),
-                        fontSize: 15),
-                  ),
-                ),
-              ),
-            ),
-            InkWell(
-              onTap: () {
-                setState(() {
-                  descIndex = 2;
-                });
-              },
-              child: Container(
-                height: 4.h,
-                width: 28.w,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(12),
-                  color: descIndex == 2 ? Color(0xff1051F8) : Color(0xff0C0D15),
-                ),
-                child: Center(
-                  child: Text(
-                    "Applicant",
-                    style: TextStyle(
-                        color: descIndex == 2
-                            ? Color(0xffFFFFFF)
-                            : Color(0xff40577D),
-                        fontSize: 15),
-                  ),
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
+    return descriptions();
   }
+
+  Container descriptions() {
+    return Container(
+  height: 8.h,
+  width: 100.w,
+  decoration: BoxDecoration(
+      borderRadius: BorderRadius.circular(12), color: Color(0xff0C0D15)),
+  child: Padding(
+    padding: const EdgeInsets.all(8.0),
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        InkWell(
+          onTap: () {
+            setState(() {
+              descIndex = 0;
+            });
+          },
+          child: Container(
+            height: 4.h,
+            width: 28.w,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(12),
+              color: descIndex == 0 ? Color(0xff1051F8) : Color(0xff0C0D15),
+            ),
+            child: Center(
+              child: Text(
+                "Descriptions",
+                style: TextStyle(
+                    color: descIndex == 0
+                        ? Color(0xffFFFFFF)
+                        : Color(0xff40577D),
+                    fontSize: 15),
+              ),
+            ),
+          ),
+        ),
+        InkWell(
+          onTap: () {
+            setState(() {
+              descIndex = 1;
+            });
+          },
+          child: Container(
+            height: 4.h,
+            width: 28.w,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(12),
+              color: descIndex == 1 ? Color(0xff1051F8) : Color(0xff0C0D15),
+            ),
+            child: Center(
+              child: Text(
+                "Company",
+                style: TextStyle(
+                    color: descIndex == 1
+                        ? Color(0xffFFFFFF)
+                        : Color(0xff40577D),
+                    fontSize: 15),
+              ),
+            ),
+          ),
+        ),
+        InkWell(
+          onTap: () {
+            setState(() {
+              descIndex = 2;
+            });
+          },
+          child: Container(
+            height: 4.h,
+            width: 28.w,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(12),
+              color: descIndex == 2 ? Color(0xff1051F8) : Color(0xff0C0D15),
+            ),
+            child: Center(
+              child: Text(
+                "Applicant",
+                style: TextStyle(
+                    color: descIndex == 2
+                        ? Color(0xffFFFFFF)
+                        : Color(0xff40577D),
+                    fontSize: 15),
+              ),
+            ),
+          ),
+        ),
+      ],
+    ),
+  ),
+);
+  }
+
+  
 }
