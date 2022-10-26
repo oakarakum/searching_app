@@ -3,6 +3,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Items with ChangeNotifier {
+  int? selectedindex = 0;
+  int? indexx;
   List popularJobsList = [
     {
       "Photo": "assets/homepage_assets/altasian-logo.svg",
@@ -29,6 +31,7 @@ class Items with ChangeNotifier {
       "location": "Ottawa, Ireland",
     },
   ];
+
   List jobType = [
     {
       "jobtype": "Freelance",
@@ -45,9 +48,11 @@ class Items with ChangeNotifier {
     {
       "menuname": "Description",
       "firstHeader": "Job Descriptions:",
-      "firstHeaderContent":"Ready to help unleash the power of teams across the\nglobe?\nWe're looking for a Product Designer to join our Cloud\nSecurity team. Jira Software, Jira Service Management,\nConfluence, and Bitbucket Data Center are Atlassian’s\non-premise offers used by our largest and most\ncomplex customers.",
+      "firstHeaderContent":
+          "Ready to help unleash the power of teams across the\nglobe?\nWe're looking for a Product Designer to join our Cloud\nSecurity team. Jira Software, Jira Service Management,\nConfluence, and Bitbucket Data Center are Atlassian’s\non-premise offers used by our largest and most\ncomplex customers.",
       "secondHeader": "Responsibilities:",
-      "secondHeaderContent":"# Work on projects across all our Cloud products\n# Harness your product design skills to help\nstreamline the critical experience for our users."
+      "secondHeaderContent":
+          "# Work on projects across all our Cloud products\n# Harness your product design skills to help\nstreamline the critical experience for our users."
     },
     {
       "menuname": "Company",
@@ -64,4 +69,37 @@ class Items with ChangeNotifier {
       "secondHeaderContent": "Team Leader"
     },
   ];
+  getmenu(int selectedindex) {
+    return detailmenus[selectedindex]["menuname"].toString();
+  }
+
+  /* getfirstheader(int selectedindex) {
+    return detailmenus[selectedindex]["firstHeader"].toString();
+  } */
+
+  /* onTapFunction(int index) {
+    selectedindex = index;
+    notifyListeners();
+  } */
+
+  getindex(int value) {
+    selectedindex = value;
+    notifyListeners();
+  }
+
+  colorchange(int value) {
+    if (selectedindex == value) {
+      return Color(0xff1051F8);
+    } else {
+      return Color(0xff0C0D15);
+    }
+  }
+
+  typecolorchange(int value) {
+    if (selectedindex == value) {
+      return Color(0xffFFFFFF);
+    } else {
+      return Color(0xff40577D);
+    }
+  }
 }
