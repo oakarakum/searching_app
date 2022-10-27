@@ -21,7 +21,7 @@ class _DescriptionMenuState extends State<DescriptionMenu> {
       return Column(
         children: [
           Container(
-            height: 8.h,
+            height: 6.5.h,
             width: 100.w,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(12),
@@ -29,7 +29,7 @@ class _DescriptionMenuState extends State<DescriptionMenu> {
             child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: SizedBox(
-                height: 200,
+                height: 100,
                 width: 200,
                 child: ListView.builder(
                     scrollDirection: Axis.horizontal,
@@ -59,7 +59,7 @@ class _DescriptionMenuState extends State<DescriptionMenu> {
               ),
             ),
           ),
-          SizedBox(height: 10.h),
+          SizedBox(height: 2.h),
           Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
