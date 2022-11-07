@@ -23,7 +23,7 @@ class _UploadTextfieldState extends State<UploadTextfield> {
         strokeWidth: 1.5,
         child: Container(
           height: 20.h,
-          width: 80.w,
+          width: 88.w,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
