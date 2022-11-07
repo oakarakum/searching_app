@@ -1,16 +1,5 @@
-# searching_app
+İş bulma uygulaması provider mantığı kullanarak oluşturdu.
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![f1](https://user-images.githubusercontent.com/113251720/200280246-d6b9fd53-d22a-49d5-90a7-0bff789c3534.PNG)
+![f2](https://user-images.githubusercontent.com/113251720/200280252-b7f3ba04-63f7-42a1-b63c-bfd5da0fc155.PNG)
+![f3](https://user-images.githubusercontent.com/113251720/200280254-38a5234b-afba-4935-9f55-e2ddc1928182.PNG)
